@@ -1,0 +1,54 @@
+﻿###########################
+# Hungarian Events
+###########################
+
+add_namespace = hungary
+
+# Gömbös dies
+country_event = {
+	id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_finnish_letter
+	
+	trigger = {
+		tag = HUN
+		date > 1936.9.5
+		date < 1936.9.8
+	}
+	
+	option = {
+		name = hungary.1.a
+	kill_country_leader = yes
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+
+	}
+
+	option = {
+		name = hungary.1.b
+	kill_country_leader = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+	create_country_leader = {
+		name = "Ferenc Szalasi"
+		desc = "POLITICS_FERENC_SZALASI_DESC"
+		picture = "Ferenc_Szalasi.dds"
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {
+		
+		}
+	}
+
+	}
+}
+

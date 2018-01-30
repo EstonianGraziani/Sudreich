@@ -1,0 +1,95 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = germany
+
+# The Kaiser Has Died
+country_event = {
+	id = germany.1
+	title = germany.1.t
+	desc = germany.1.d
+	picture = GFX_report_event_europe_funeral
+
+	trigger = {
+		tag = GER
+		date > 1941.6.8
+		date < 1941.6.10
+	}
+	
+	#Legitimate Successor
+	option = {
+		name = germany.1.a
+		ai_chance = {
+			factor = 50
+		}
+	kill_country_leader = yes		
+	create_country_leader = {
+			name = "Wilhelm The Third"
+			desc = "POLITICS_WILLY3_DESC"
+			picture = "Wilhelm_Three.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				
+			}
+		}
+	
+	}
+
+	#German Elections
+	option = {
+		name = germany.1.b
+		ai_chance = {
+			factor = 51
+		}
+		kill_country_leader = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.55
+			}
+			country_event = { id = germany.2 }
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			
+	}	
+# The Kaiser Has Died
+country_event = {
+	id = germany.2
+	title = germany.2.t
+	desc = germany.2.d
+	picture = GFX_report_event_europe_funeral
+
+	trigger = {
+		tag = GER
+		date > 1941.6.8
+		date < 1941.6.10
+	}
+	
+	# SPD
+	option = {
+		name = germany.2.a
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	# NDAP
+	option = {
+		name = germany.2.b
+		ai_chance = {
+			factor = 51
+		}
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.65
+			}
+			set_politics = {
+				ruling_party = fascist
+				elections_allowed = yes
+			}
+			
+	}
+}
