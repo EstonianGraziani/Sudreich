@@ -1,0 +1,49 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = fascism
+		}
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+		}
+
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = neutrality
+		}
+		"AUS"={
+			history = "AUS_GATHERING_STORM_DESC"
+			ideology = communism
+		}
+		"HUN"={
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = fascism		
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		"JAP"={
+			minor = yes
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = fascism
+		}
+}
